@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Centered Image with Caption</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f6f7fb;
+      color: #111827;
+    }
+
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .card {
+      text-align: center;
+      max-width: 400px; /* make the card narrower */
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(17,24,39,0.08);
+      border: 6px solid #f59e0b;
+    }
+
+    .card img {
+      display: block;
+      max-width: 100%;
+      width: 250px;       /* smaller fixed width */
+      height: auto;
+      margin: 0 auto 16px auto;
+      border-radius: 8px;
+    }
+
+    .caption {
+      font-size: 16px;
+      line-height: 1.3;
+      color: #374151;
+      font-weight: 600;
+    }
+
+    @media (max-width:420px){
+      .card { padding: 18px; max-width: 90%; }
+      .card img { width: 100%; }
+      .caption { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Centered image with caption">
+      <!-- Replace 'blee.jpg' with your own image filename or URL -->
+      <img src="blee.jpg" alt="Prank image" />
+
+      <p class="caption">It's a prank.</p>
+    </div>
+  </div>
+</body>
+</html>
